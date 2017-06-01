@@ -3,4 +3,5 @@
 .happypack
 .vscode
 npm-debug.log
-public
+node_module
+public/*

@@ -73,15 +73,19 @@ const handleContent = ($, url) => {
     uid: uid(8),
     title,
     csrc,
-    time,
+    time: getTime(time),
     timestamp: handleTime(time),
     source,
     content,
   }
 }
 
+const getTime = (time) => {
+  return time.replace(/[^\d-]/ig, "");
+}
+
 const handleTime = (time) => {
-  time = time.replace(/[^\d-]/ig, "");
+  time = getTime(time);
   return moment(time).valueOf();
 }
 
