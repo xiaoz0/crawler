@@ -67,7 +67,7 @@ const handleContent = ($, url) => {
   $title.remove();
   $time.remove();
 
-  const content =  handleString($content.html());
+  const content = $content.html();
 
   return {
     uid: uid(8),
